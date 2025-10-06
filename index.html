@@ -14,23 +14,43 @@
 
                 <form method="post" action="static/php/index.php">
                     <div class="form-group">
-                        <label>Nome</label>
-                        <input type="text" name="nome" class="form-control" placeholder="Il tuo nome">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" class="form-control" placeholder="Il tuo nome">
                     </div>
+
                     <div class="form-group">
-                        <label>Piatto preferito</label>
-                        <input type="text" name="piatto" class="form-control" placeholder="Es. Spaghetti alle vongole">
+                        <label for="piatto">Piatto preferito</label>
+                        <select id="piatto" name="piatto" class="form-control">
+                            <option value="">-- Scegli un piatto --</option>
+                            <option value="Spaghetti alle vongole">Spaghetti alle vongole</option>
+                            <option value="Risotto ai funghi">Risotto ai funghi</option>
+                            <option value="Pizza Margherita">Pizza Margherita</option>
+                            <option value="Tagliata di manzo">Tagliata di manzo</option>
+                            <option value="Tiramisù">Tiramisù</option>   
+                            <option value="Pancake">Pancake</option>  
+                        </select>
                     </div>
+
                     <div class="form-group">
                         <label>Allergie alimentari</label><br>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="allergie[]" value="Glutine"> Glutine<br>
-                            <input class="form-check-input" type="checkbox" name="allergie[]" value="Lattosio"> Lattosio<br>
-                            <input class="form-check-input" type="checkbox" name="allergie[]" value="Frutta secca"> Frutta secca<br>
-                            <input class="form-check-input" type="checkbox" name="allergie[]" value="Crostacei"> Crostacei<br>
-                            <input class="form-check-input" type="checkbox" name="allergie[]" value="Uova"> Uova<br>
+                            <input class="form-check-input" type="checkbox" id="glutine" name="allergie[]" value="Glutine">
+                            <label class="form-check-label" for="glutine">Glutine</label><br>
+
+                            <input class="form-check-input" type="checkbox" id="lattosio" name="allergie[]" value="Lattosio">
+                            <label class="form-check-label" for="lattosio">Lattosio</label><br>
+
+                            <input class="form-check-input" type="checkbox" id="frutta" name="allergie[]" value="Frutta secca">
+                            <label class="form-check-label" for="frutta">Frutta secca</label><br>
+
+                            <input class="form-check-input" type="checkbox" id="crostacei" name="allergie[]" value="Crostacei">
+                            <label class="form-check-label" for="crostacei">Crostacei</label><br>
+
+                            <input class="form-check-input" type="checkbox" id="uova" name="allergie[]" value="Uova">
+                            <label class="form-check-label" for="uova">Uova</label>
                         </div>
                     </div>
+
                     <button type="submit" class="btn btn-primary btn-block">Invia ordine</button>
                 </form>
             </div>
